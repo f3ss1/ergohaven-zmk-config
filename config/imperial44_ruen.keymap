@@ -69,6 +69,8 @@
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
+                <&to_ru>,
+                <&macro_tap>,
                 <&to_ru>;
 
             label = "EN";
