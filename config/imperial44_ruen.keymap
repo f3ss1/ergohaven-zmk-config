@@ -111,7 +111,7 @@
 &trans  &kp PIPE   &kp STAR       &kp PLUS   &kp MINUS       &kp SLASH                               &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN      &kp GREATER_THAN  &kp AT      &trans
 &trans  &kp BSLH   &kp EQUAL      &kp COMMA  &kp DOT         &kp QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp DOLLAR  &trans
 &trans  &kp TILDE  &kp AMPERSAND  &kp CARET  &kp UNDERSCORE  &kp EXCLAMATION  &kp HASH    &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON      &kp PERCENT       &kp GRAVE   &trans
-                                             &trans          &trans           &trans      &trans     &trans                &trans
+                                             &trans          &mo 5            &trans      &trans     &trans                &trans
             >;
 
             display-name = "Symbols";
@@ -121,18 +121,18 @@
             display-name = "Symbols";
             bindings = <
 &trans  &kp PIPE     &kp STAR       &kp PLUS      &kp RU_MINUS    &kp RU_SLASH                               &en LEFT_BRACE        &en RIGHT_BRACE        &en LESS_THAN         &en GREATER_THAN  &en AT      &trans
-&trans  &kp RU_BSLH  &kp EQUAL      &kp RU_COMMA  &kp RU_COMMA    &kp RU_QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_DOUBLE_QUOTES  &en SINGLE_QUOTE  &en DOLLAR  &trans
-&trans  &en TILDE    &en AMPERSAND  &en CARET     &kp UNDERSCORE  &kp EXCLAMATION  &en HASH    &kp RU_COLON  &en LEFT_BRACKET      &en RIGHT_BRACKET      &kp RU_SEMICOLON      &en RU_PERCENT    &kp GRAVE   &trans
-                                                  &trans          &trans           &trans      &trans        &trans                &trans
+&trans  &kp RU_BSLH  &kp EQUAL      &kp RU_COMMA  &kp RU_DOT      &kp RU_QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_DOUBLE_QUOTES  &en SINGLE_QUOTE  &en DOLLAR  &trans
+&trans  &en TILDE    &en AMPERSAND  &en CARET     &kp UNDERSCORE  &kp EXCLAMATION  &en HASH    &kp RU_COLON  &en LEFT_BRACKET      &en RIGHT_BRACKET      &kp RU_SEMICOLON      &en RU_PERCENT    &en GRAVE   &trans
+                                                  &trans          &mo 5            &trans      &trans        &trans                &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                    &kp N6           &kp N7    &kp N8  &kp N9           &kp N0  &trans
-&trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &kp RET                         &kp LEFT         &kp DOWN  &kp UP  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &kp LC(LEFT)  &kp CAPS      &kp LC(RIGHT)  &kp DEL       &trans    &trans  &kp PRINTSCREEN  &kp N1    &kp N2  &kp N3           &trans  &trans
-                                            &trans         &trans        &trans    &trans  &mo 0            &trans
+&trans  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &kp N6    &kp N7    &kp N8  &kp N9           &kp N0  &trans
+&trans  &trans  &trans        &trans        &trans        &trans                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans        &trans        &trans        &trans        &trans    &trans  &trans    &trans    &trans  &trans           &trans  &trans
+                                            &trans        &trans        &trans    &trans  &mo 5     &trans
             >;
 
             display-name = "Nav";
@@ -140,10 +140,10 @@
 
         adj {
             bindings = <
-&bootloader  &trans  &kp F1  &kp F2   &kp F3   &kp F4                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans       &trans  &kp F5  &kp F6   &kp F7   &kp F8                     &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans        &studio_unlock
-&trans       &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans
-                                      &trans   &trans   &trans    &trans  &trans        &trans
+&kp F1        &kp F2        &kp F3        &kp F4  &kp F5  &kp F6                    &kp F7      &kp F8                &kp F9                &kp F10  &kp F11       &kp F12
+&trans        &trans        &trans        &trans  &trans  &trans                    &kp C_MUTE  &kp C_VOL_DN          &kp C_VOLUME_UP       &trans   &trans        &kp PRINTSCREEN
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans    &trans  &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans   &out OUT_USB  &out OUT_BLE
+                                                  &trans  &trans  &trans    &trans  &trans      &trans
             >;
 
             display-name = "Adjust";
