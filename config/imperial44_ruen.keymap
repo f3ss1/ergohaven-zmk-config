@@ -120,10 +120,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &kp PIPE     &kp STAR       &kp PLUS      &kp RU_MINUS    &en RU_SLASH                            &kp LEFT_BRACE        &en RIGHT_BRACE        &kp LESS_THAN      &en GREATER_THAN  &en AT      &trans
-&trans  &kp RU_BSLH  &kp EQUAL      &en RU_COMMA  &kp KP_DOT      &kp QUESTION                            &kp LEFT_PARENTHESIS  &en RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &en DOLLAR  &trans
-&trans  &en TILDE    &en AMPERSAND  &kp CARET     &kp UNDERSCORE  &kp EXCLAMATION  &kp HASH    &kp COLON  &kp LEFT_BRACKET      &en RIGHT_BRACKET      &en SEMICOLON      &en PERCENT       &kp GRAVE   &trans
-                                                  &trans          &trans           &trans      &trans     &trans                &trans
+&trans  &kp PIPE     &kp STAR       &kp PLUS      &kp RU_MINUS    &kp RU_SLASH                               &en LEFT_BRACE        &en RIGHT_BRACE        &en LESS_THAN         &en GREATER_THAN  &en AT      &trans
+&trans  &kp RU_BSLH  &kp EQUAL      &kp RU_COMMA  &kp RU_COMMA    &kp RU_QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_DOUBLE_QUOTES  &en SINGLE_QUOTE  &en DOLLAR  &trans
+&trans  &en TILDE    &en AMPERSAND  &en CARET     &kp UNDERSCORE  &kp EXCLAMATION  &en HASH    &kp RU_COLON  &en LEFT_BRACKET      &en RIGHT_BRACKET      &kp RU_SEMICOLON      &en RU_PERCENT    &kp GRAVE   &trans
+                                                  &trans          &trans           &trans      &trans        &trans                &trans
             >;
         };
 
