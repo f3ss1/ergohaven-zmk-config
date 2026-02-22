@@ -111,7 +111,7 @@
 &trans  &kp PIPE   &kp STAR       &kp PLUS   &kp MINUS       &kp SLASH                               &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN      &kp GREATER_THAN  &kp AT      &trans
 &trans  &kp BSLH   &kp EQUAL      &kp COMMA  &kp DOT         &kp QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp DOLLAR  &trans
 &trans  &kp TILDE  &kp AMPERSAND  &kp CARET  &kp UNDERSCORE  &kp EXCLAMATION  &kp HASH    &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON      &kp PERCENT       &kp GRAVE   &trans
-                                             &trans          &mo 5            &trans      &trans     &trans                &trans
+                                             &trans          &mo 5            &trans      &trans     &mo 2                 &trans
             >;
 
             display-name = "Symbols";
@@ -123,7 +123,7 @@
 &trans  &kp PIPE     &kp STAR       &kp PLUS      &kp RU_MINUS    &kp RU_SLASH                               &en LEFT_BRACE        &en RIGHT_BRACE        &en LESS_THAN         &en GREATER_THAN  &en AT      &trans
 &trans  &kp RU_BSLH  &kp EQUAL      &kp RU_COMMA  &kp RU_DOT      &kp RU_QUESTION                            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_DOUBLE_QUOTES  &en SINGLE_QUOTE  &en DOLLAR  &trans
 &trans  &en TILDE    &en AMPERSAND  &en CARET     &kp UNDERSCORE  &kp EXCLAMATION  &en HASH    &kp RU_COLON  &en LEFT_BRACKET      &en RIGHT_BRACKET      &kp RU_SEMICOLON      &en RU_PERCENT    &en GRAVE   &trans
-                                                  &trans          &mo 5            &trans      &trans        &trans                &trans
+                                                  &trans          &mo 5            &trans      &trans        &mo 3                 &trans
             >;
         };
 
