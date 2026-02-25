@@ -26,7 +26,7 @@
             tap-ms = <30>;
         };
 
-        layer_en: layer_en {
+        layer_en_ctrl: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &to_en>;
@@ -35,7 +35,7 @@
             tap-ms = <30>;
         };
 
-        layer_ru: layer_ru {
+        layer_ru_ctrl: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 1 &to_ru>;
@@ -63,13 +63,51 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        layer_en_cmd: layer_en_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 2 &to_en>;
+            label = "LAYER_EN_CTRL";
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        layer_ru_cmd: layer_ru_cmd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &to_ru>;
+            label = "LAYER_RU_CMD";
+            tap-ms = <30>;
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
+        en_sw_lang_or_ctrl: en_sw_lang_or_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EN_SW_LANG_OR_CTRL";
+            bindings = <&to>, <&layer_en_cmd>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <2000>;
+            flavor = "tap-preferred";
+        };
+
+        ru_sw_lang_or_ctrl: ru_sw_lang_or_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_SW_LANG_OR_CTRL";
+            bindings = <&to>, <&layer_ru_cmd>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <2000>;
+            flavor = "tap-preferred";
+        };
+
         en_sw_lang_or_cmd: en_sw_lang_or_cmd {
             compatible = "zmk,behavior-hold-tap";
             label = "EN_SW_LANG_OR_CMD";
-            bindings = <&to>, <&layer_en>;
+            bindings = <&to>, <&layer_en_ctrl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
@@ -79,7 +117,7 @@
         ru_sw_lang_or_cmd: ru_sw_lang_or_cmd {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_SW_LANG_OR_CMD";
-            bindings = <&to>, <&layer_ru>;
+            bindings = <&to>, <&layer_ru_ctrl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
@@ -117,7 +155,7 @@
         en_cmd {
             display-name = "en_cmd";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E  &kp R             &kp T                              &kp Y  &kp U      &kp I      &kp O    &kp P     &ru_sw_lang_or_cmd 0 0
+&kp ESC    &kp Q  &kp W  &kp E  &kp R             &kp T                              &kp Y  &kp U      &kp I      &kp O    &kp P     &ru_sw_lang_or_ctrl 0 0
 &kp TAB    &kp A  &kp S  &kp D  &kp F             &kp G                              &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp LEFT_CONTROL
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V             &kp B  &kp LBKT     &kp RBKT       &kp N  &kp M      &kp COMMA  &kp DOT  &kp SQT   &kp DELETE
                                 &kp LEFT_COMMAND  &mo 6  &kp SPACE    &kp BACKSPACE  &mo 4  &kp ENTER
@@ -131,7 +169,7 @@
         ru_cmd {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &en_sw_lang_or_cmd 1 0
+&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &en_sw_lang_or_ctrl 1 0
 &kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                                   &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp LEFT_CONTROL
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_HA    &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_E    &kp DELETE
                                                                               &kp LEFT_COMMAND    &mo 6               &kp SPACE             &kp BACKSPACE              &mo 5               &kp ENTER
